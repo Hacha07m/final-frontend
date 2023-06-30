@@ -7,6 +7,7 @@ import loginImg from "../assets/images/login.png";
 import userIcon from "../assets/images/user.png";
 
 import {AuthContext} from './../context/AuthContext'
+import { BASE_URL } from "../utils/config";
 
 
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
 
     dispatch({type: 'LOGIN_START'})
     try {
-      const res =await fetch (`http://localhost:4000/api/v1/auth/login`,{
+      const res =await fetch (`${BASE_URL}/auth/login`,{
         method:"post",
         headers:{
           "Content-Type":"application/json"

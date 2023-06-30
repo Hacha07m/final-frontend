@@ -8,14 +8,15 @@ import TourCard from "./../shared/TourCard";
 import SearchBar from "./../shared/SearchBar";
 import Newsletter from "./../shared/Newsletter";
 import tourData from "./../assets/data/tours";
+import { BASE_URL } from "../utils/config";
 
 const Tours = () => {
 
   const [pageCount, setPageCount] = useState(0)
   const [page,setPage] = useState(0)
 
-  const {data:tours, loading, error}= (`http://localhost:4000/api/v1/tours`)
-  const {data:tourCount} = (`http://localhost:4000/api/v1/tours/search/getTourCount`)
+  const {data:tours, loading, error}= (`${BASE_URL}/tours`)
+  const {data:tourCount} = (`${BASE_URL}/tours/search/getTourCount`)
 
 
   

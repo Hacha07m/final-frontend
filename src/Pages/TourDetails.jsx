@@ -9,7 +9,7 @@ import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
 import Newsletter from "../shared/Newsletter";
 
-
+import { BASE_URL } from "../utils/config";
 import { AuthContext } from "../context/AuthContext";
 
 const TourDetails = () => {
@@ -49,7 +49,7 @@ const TourDetails = () => {
         reviewText,
         rating:tourRating
       }
-      const res = await fetch (`http://localhost:4000/api/v1/review/${id}`,{
+      const res = await fetch (`${BASE_URL}/review/${id}`,{
         method: "post",
         headers:{
           'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ const TourDetails = () => {
                 <div className="tour__info">
                   <h2>{title}</h2>
                   <div className="d-flex align-items-center gap-5">
-                    <span className="tour__rating d-flex align-items-center gap-1">
+                    {/* <span className="tour__rating d-flex align-items-center gap-1">
                       <i
                         class="ri-star-fill"
                         style={{ color: "var(--secondary-color)" }}
@@ -94,7 +94,7 @@ const TourDetails = () => {
                       ) : (
                         <span>({reviews?.length})</span>
                       )}
-                    </span>
+                    </span> */}
 
                     <span>
                       <i class="ri-map-pin-user-fill"></i> {address}
@@ -122,7 +122,7 @@ const TourDetails = () => {
                   <p>{desc}</p>
                 </div>
 
-                <div className="tour__reviews mt-4">
+                {/* <div className="tour__reviews mt-4">
                   <h4>Reviews ({reviews?.length} reviews)</h4>
                   <Form onSubmit={submitHandler}>
                     <div className="d-flex align-items-center gap-3 mb-4 rating__group">
@@ -178,7 +178,7 @@ const TourDetails = () => {
                       </div>
                     )))}
                   </ListGroup>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col lg='4'>

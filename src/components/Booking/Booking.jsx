@@ -4,6 +4,7 @@ import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { BASE_URL } from "../../utils/config";
 
 const Booking = ({ tour, avgRating }) => {
   const { price, reviews, title } = tour;
@@ -38,7 +39,7 @@ const Booking = ({ tour, avgRating }) => {
         alert("Please sign in");
       }
 
-      const res = await fetch(`http://localhost:4000/api/v1/booking`, {
+      const res = await fetch(`${BASE_URL}/booking`, {
         method: "post",
         headers: {
           "content-type": "application/json",
@@ -62,10 +63,10 @@ const Booking = ({ tour, avgRating }) => {
         <h3>
           ${price} <span>/per person</span>{" "}
         </h3>
-        <span className="tour__rating d-flex align-items-center ">
+        {/* <span className="tour__rating d-flex align-items-center ">
           <i class="ri-star-fill"></i>
           {avgRating === 0 ? null : avgRating} ({reviews?.length})
-        </span>
+        </span> */}
       </div>
 
       <div className="booking__form">

@@ -8,6 +8,7 @@ import userIcon from "../assets/images/user.png";
 
 
 import {AuthContext} from './../context/AuthContext'
+import { BASE_URL } from "../utils/config";
 
 
 
@@ -32,7 +33,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res= await fetch(`http://localhost:4000/api/v1/auth/register`, {
+      const res= await fetch(`${BASE_URL}/auth/register`, {
         method: 'post',
         headers: {
           'content-type': 'application/json'

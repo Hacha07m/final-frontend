@@ -3,6 +3,8 @@ import TourCard from "../../shared/TourCard";
 import { Col } from "reactstrap";
 import tourData from "../../assets/data/tours"
 
+import { BASE_URL } from "../../utils/config";
+
 const FeaturedTourList = () => {
   
 

@@ -3,6 +3,7 @@ import "./search-bar.css";
 import { Col, Form, FormGroup } from "reactstrap";
 
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../utils/config";
 
 const SearchBar = () => {
 
@@ -22,7 +23,7 @@ const SearchBar = () => {
     }
 
     const res = await fetch(
-      `http://localhost:4000/api/v1/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
+      `${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
 
     if(!res.ok) alert('Somthing went wrong');
     

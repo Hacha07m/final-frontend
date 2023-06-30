@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://travel-world-ukn9.onrender.com'

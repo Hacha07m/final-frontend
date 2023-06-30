@@ -36,7 +36,7 @@ const tours = [
     city: "Indonesia",
     address: "Somewhere",
     distance: 400,
-    price: 99,
+    price: 129,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -55,7 +55,7 @@ const tours = [
     city: "Thailand",
     address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 80,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -74,7 +74,7 @@ const tours = [
     city: "Thailand",
   address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 109,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -93,7 +93,7 @@ const tours = [
     city: "Indonesia",
     address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 55,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -112,7 +112,7 @@ const tours = [
     city: "Japan",
     address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 250,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -131,7 +131,7 @@ const tours = [
     city: "France",
     address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 100,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],
@@ -145,7 +145,7 @@ const tours = [
     city: "Thailand",
     address: "Somewhere",
     distance: 500,
-    price: 99,
+    price: 130,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],
