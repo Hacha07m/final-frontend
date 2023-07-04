@@ -39,7 +39,7 @@ const Booking = ({ tour, avgRating }) => {
         alert("Please sign in");
       }
 
-      const res = await fetch(`http://travel-world-ukn9.onrender.com/api/v1/booking`, {
+      const res = await fetch(`https://travel-world-ukn9.onrender.com/api/v1/booking`, {
         method: "post",
         headers: {
           "content-type": "application/json",
