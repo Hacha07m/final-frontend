@@ -29,7 +29,7 @@ const Login = () => {
 
     dispatch({type: 'LOGIN_START'})
     try {
-      const res =await fetch (`https://travel-world-ukn9.onrender.com/api/v1/auth/login`,{
+      const res =await fetch (`${BASE_URL}/auth/login`,{
         method:"post",
         headers:{
           "Content-Type":"application/json"
