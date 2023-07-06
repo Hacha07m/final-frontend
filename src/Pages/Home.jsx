@@ -27,7 +27,7 @@ const Home = () => {
               <div className="hero__content">
                 <div className="hero__subtitle d-flex align-items-center">
                   <Subtitle subtitle={"Know Befor You Go"} />
-                  <img src={worldImg} alt="" />
+                  <Link to={"/home"} ><img src={worldImg} alt=""  /></Link>
                 </div>
                 <h1>
                   Traveling opens the door to creating {""}{" "}
