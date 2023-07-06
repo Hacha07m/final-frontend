@@ -48,7 +48,7 @@ const Booking = ({ tour, avgRating }) => {
         body: JSON.stringify(booking),
       });
       const result = await res.json();
-      if (!res.ok) {
+      if (res.ok) {
         return alert(result.message);
       }
       navigate("/thank-you");
