@@ -28,7 +28,7 @@ const SearchBar = () => {
     // if(!res.ok) alert('Somthing went wrong');
     
     // const result = await res.json();
-    const result = tours.filter(tour=> tour.title=== location && tour.distance=== distance && tour.maxGroupSize=== maxGroupSize)
+    const result = tours.filter(tour=> tour.title== location && tour.distance== distance && tour.maxGroupSize== maxGroupSize)
     navigate(
       `/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`,{state : result})
 
