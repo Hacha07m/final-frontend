@@ -17,7 +17,7 @@ const SearchBar = () => {
         const location = locationRef.current.value
         const distance = distanceRef.current.value
         const maxGroupSize = maxGroupSizeRef.current.value
-
+        console.log(location,distance,maxGroupSize)
     if (location === "" || distance === "" || maxGroupSize === "" ){
         return alert("All fields are required !")
     }
@@ -25,7 +25,7 @@ const SearchBar = () => {
     const res = await fetch(
       `${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
 
-    if(res.ok) alert('Somthing went wrong');
+    if(!res.ok) alert('Somthing went wrong');
     
     const result = await res.json();
     navigate(
