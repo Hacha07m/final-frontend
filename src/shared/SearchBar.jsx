@@ -4,6 +4,7 @@ import { Col, Form, FormGroup } from "reactstrap";
 
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/config";
+import tours from "../assets/data/tours";
 
 const SearchBar = () => {
 
@@ -17,19 +18,19 @@ const SearchBar = () => {
         const location = locationRef.current.value
         const distance = distanceRef.current.value
         const maxGroupSize = maxGroupSizeRef.current.value
-        console.log(location,distance,maxGroupSize)
     if (location === "" || distance === "" || maxGroupSize === "" ){
         return alert("All fields are required !")
     }
 
-    const res = await fetch(
-      `${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
+    // const res = await fetch(
+    //   `${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
 
-    if(!res.ok) alert('Somthing went wrong');
+    // if(!res.ok) alert('Somthing went wrong');
     
-    const result = await res.json();
+    // const result = await res.json();
+    const result = tours.filter(tour=> tour.title=== location && tour.distance=== distance && tour.maxGroupSize=== maxGroupSize)
     navigate(
-      `/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`,{state : result.data})
+      `/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`,{state : result})
 
     };
 
